@@ -12,3 +12,7 @@ crate-type = ["cdylib"]
 [dependencies]
 ic-cdk = "0.3"
 ic-cdk-macros = "0.3"
+ic-kit = "0.4.3"
+
+[target.'cfg(not(target_family = "wasm"))'.dependencies]
+async-std = { version="1.10.0", features = ["attributes"] }
