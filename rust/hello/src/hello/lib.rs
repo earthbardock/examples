@@ -6,6 +6,11 @@ fn greet(name: String) -> String {
     format!("Hello, {}!", name)
 }
 
+#[ic_cdk_macros::query]
+#[candid_method(query)]
+fn version() -> &'static str {
+    "0.0.5"
+}
 
 // ---------------- CANDID -----------------------
 
